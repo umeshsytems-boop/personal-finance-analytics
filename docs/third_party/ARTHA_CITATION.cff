@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite both the artifact and the accompanying paper."
+title: "The Artha Personal-Finance Reasoning Benchmark"
+abstract: >-
+  A reproducible, model-agnostic benchmark for evaluating LLM-based
+  personal-finance agents on answer quality (aggregative and multi-hop
+  reasoning over a full transaction ledger) and grounding / hallucination
+  resistance (verified false-premise traps), over a BLS-calibrated
+  synthetic transaction population, with a four-dimension three-judge
+  LLM-as-judge scoring protocol.
+version: "1.0"
+date-released: "2026-01-01"
+license: CC-BY-4.0
+type: dataset
+authors:
+  - family-names: "Katika"
+    given-names: "Tejashwar Reddy"
+    affiliation: "University of North Texas"
+    ORCID:       "https://orcid.org/0009-0006-3015-5697"
+keywords:
+  - personal finance
+  - LLM agents
+  - benchmark
+  - hallucination
+  - grounding
+  - LLM-as-judge
+  - BLS calibration
+# Paste the DOI minted by Hugging Face (dataset Settings -> "Generate DOI") here:
+doi: "10.57967/hf/9387"
+repository-code: "https://huggingface.co/datasets/Tej-Katika/artha-benchmark"
+url: "https://github.com/Tej-Katika/artha"
+preferred-citation:
+  type: article
+  title: "Artha: A Domain Ontology-Driven Agentic Framework for LLM-Based Personal Finance Reasoning"
+  year: 2026
+  authors:
+    - family-names: "Katika"
+      given-names: "Tejashwar Reddy"
+  journal: "SSRN Electronic Journal"
+  url: "https://ssrn.com/abstract=6885058"
+  notes: "SSRN preprint."
