@@ -1,0 +1,9 @@
+{
+  "users_counted": 500,
+  "users_reported_by_source": 500,
+  "transactions_counted": 120817,
+  "duplicate_user_ids": 0,
+  "duplicate_transaction_ids": 0,
+  "earliest_date": "2024-01-01",
+  "latest_date": "2024-12-28"
+}
