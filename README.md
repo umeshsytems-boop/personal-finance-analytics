@@ -49,3 +49,5 @@ Follow [Step 1](docs/step_01_setup.md). The raw file is intentionally excluded f
 ## Current limitations
 
 This is a learning and demonstration project. The source is a synthetic transaction history, not an audited bank ledger. The supplied balance values and merchant/category assignments need further validation. The file does not contain a complete account, liability, holdings, or savings-goal model. No net-worth or investment-return result is claimed at this stage.
+
+Status: Step 2 — Python environment created and source inspection script running locally.
