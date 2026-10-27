@@ -1,0 +1,31 @@
+# Original downloads and reproducible data outputs stay local.
+/data/raw/*
+!/data/raw/README.md
+/data/interim/
+/data/processed/
+/logs/
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+
+# Local database files and backups
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.mdf
+*.ldf
+
+# Operating-system files
+.DS_Store
+Thumbs.db
