@@ -1,0 +1,18 @@
+{
+  "scope": "Exported fields compared with the original JSON",
+  "source_users": 500,
+  "csv_users": 500,
+  "source_transactions": 120817,
+  "csv_transactions": 120817,
+  "unmatched_source_users": 0,
+  "unmatched_csv_users": 0,
+  "unmatched_source_transactions": 0,
+  "unmatched_csv_transactions": 0,
+  "checks": {
+    "users_csv_structure": true,
+    "transactions_csv_structure": true,
+    "users_match_source": true,
+    "transactions_match_source": true
+  },
+  "all_checks_passed": true
+}

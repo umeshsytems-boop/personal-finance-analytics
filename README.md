@@ -72,8 +72,10 @@ Recreate the tables by running:
 
 Next: validate the extracted tables.
 
-**Status: Step 6B — 11 table validation checks passed.**
+**Status: Step 6C — exported user and transaction records reconciled with the source JSON.**
 
 Validation results: [Count and ID report](docs/table_validation.json).
 
-Next: reconcile the extracted tables with the original JSON.
+Source comparison: [Reconciliation report](docs/source_reconciliation.json).
+
+Next: document source limitations and cleaning decisions.
