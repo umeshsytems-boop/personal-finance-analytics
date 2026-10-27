@@ -53,3 +53,10 @@ This is a learning and demonstration project. The source is a synthetic transact
 Status: Step 2 — Python environment created and source inspection script running locally.
 
 Status: Step 3 — Source profiling completed: 500 users, 120,817 transactions, and no duplicate user or transaction IDs found.
+
+**Status: Step 5A — source profiling and user extraction complete.**
+
+Extracted 500 synthetic users into `data/interim/users.csv`.
+Run `.\.venv\Scripts\python.exe .\src\extract_users.py` to recreate the table.
+
+Next: extract transactions and connect them to users.
