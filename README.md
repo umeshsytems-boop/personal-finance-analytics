@@ -72,8 +72,8 @@ Recreate the tables by running:
 
 Next: validate the extracted tables.
 
-**Status: Step 6A — CSV row counts and ID relationships validated.**
+**Status: Step 6B — 11 table validation checks passed.**
 
 Validation results: [Count and ID report](docs/table_validation.json).
 
-Next: validate transaction dates, amounts, and types.
+Next: reconcile the extracted tables with the original JSON.
