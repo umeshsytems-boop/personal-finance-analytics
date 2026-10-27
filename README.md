@@ -71,3 +71,9 @@ Recreate the tables by running:
 - `.\.venv\Scripts\python.exe .\src\extract_transactions.py`
 
 Next: validate the extracted tables.
+
+**Status: Step 6A — CSV row counts and ID relationships validated.**
+
+Validation results: [Count and ID report](docs/table_validation.json).
+
+Next: validate transaction dates, amounts, and types.

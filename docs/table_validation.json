@@ -1,0 +1,16 @@
+{
+  "scope": "CSV row counts and identifier relationships",
+  "users_checked": 500,
+  "transactions_checked": 120817,
+  "checks": {
+    "user_count_matches_profile": true,
+    "transaction_count_matches_profile": true,
+    "user_ids_present": true,
+    "user_ids_unique": true,
+    "transaction_ids_present": true,
+    "transaction_ids_unique": true,
+    "transaction_user_ids_present": true,
+    "transaction_users_exist": true
+  },
+  "all_checks_passed": true
+}
