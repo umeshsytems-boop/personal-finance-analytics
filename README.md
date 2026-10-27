@@ -80,13 +80,13 @@ Source comparison: [Reconciliation report](docs/source_reconciliation.json).
 
 Next: document source limitations and cleaning decisions.
 
-**Status: Step 6D — source limitations and data handling decisions documented.**
+**Status: Step 7A — financial extension tables and relationships planned.**
 
 Validation evidence:
 - [Table validation report](docs/table_validation.json)
 - [Source reconciliation report](docs/source_reconciliation.json)
 
 Project decisions:
-- [Data quality and handling decisions](docs/data_quality_decisions.md)
+- [Financial model plan](docs/financial_model_plan.md)
 
-Next: define the missing financial entities and plan their synthetic extensions.
+Next: generate and validate synthetic accounts linked to existing users.
