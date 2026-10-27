@@ -60,3 +60,14 @@ Extracted 500 synthetic users into `data/interim/users.csv`.
 Run `.\.venv\Scripts\python.exe .\src\extract_users.py` to recreate the table.
 
 Next: extract transactions and connect them to users.
+
+**Status: Step 5B — user and transaction extraction complete.**
+
+Extracted 500 users and 120,817 transactions from the synthetic source.
+The tables connect through `user_id`.
+
+Recreate the tables by running:
+- `.\.venv\Scripts\python.exe .\src\extract_users.py`
+- `.\.venv\Scripts\python.exe .\src\extract_transactions.py`
+
+Next: validate the extracted tables.
