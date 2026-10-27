@@ -1,5 +1,5 @@
 {
-  "scope": "CSV row counts and identifier relationships",
+  "scope": "CSV counts, IDs, transaction dates, amounts, and types",
   "users_checked": 500,
   "transactions_checked": 120817,
   "checks": {
@@ -10,7 +10,10 @@
     "transaction_ids_present": true,
     "transaction_ids_unique": true,
     "transaction_user_ids_present": true,
-    "transaction_users_exist": true
+    "transaction_users_exist": true,
+    "transaction_dates_valid": true,
+    "transaction_amounts_valid": true,
+    "transaction_types_valid": true
   },
   "all_checks_passed": true
 }
