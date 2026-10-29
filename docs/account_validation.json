@@ -1,0 +1,18 @@
+{
+  "scope": "Synthetic account registry and links to exported users",
+  "generator_version": "accounts_v1",
+  "generation_rule": "One CASH and one INVESTMENT account per user; IDs derived from user_id and type",
+  "currency_note": "USD is a demonstration assumption, not a source-provided currency",
+  "users_checked": 500,
+  "accounts_checked": 1000,
+  "checks": {
+    "csv_matches_generated_records": true,
+    "account_count_correct": true,
+    "account_ids_present_and_unique": true,
+    "account_owners_exist": true,
+    "one_account_of_each_type_per_user": true,
+    "currency_assumption_applied": true,
+    "synthetic_origin_recorded": true
+  },
+  "all_checks_passed": true
+}

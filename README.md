@@ -78,15 +78,18 @@ Validation results: [Count and ID report](docs/table_validation.json).
 
 Source comparison: [Reconciliation report](docs/source_reconciliation.json).
 
-Next: document source limitations and cleaning decisions.
+**Status: Step 7B — 1,000 synthetic accounts generated and validated for 500 users.**
 
-**Status: Step 7A — financial extension tables and relationships planned.**
+Recreate the account registry:
+`.\.venv\Scripts\python.exe .\src\generate_accounts.py`
 
 Validation evidence:
 - [Table validation report](docs/table_validation.json)
 - [Source reconciliation report](docs/source_reconciliation.json)
+- [Account validation report](docs/account_validation.json)
 
 Project decisions:
+- [Data quality and handling decisions](docs/data_quality_decisions.md)
 - [Financial model plan](docs/financial_model_plan.md)
 
-Next: generate and validate synthetic accounts linked to existing users.
+Next: generate and validate the first cash-balance snapshots.

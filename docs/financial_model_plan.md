@@ -6,8 +6,13 @@ Extend the existing synthetic user and transaction dataset so that
 Python, SQL, Power BI, and the future web dashboard can share the
 same financial data model.
 
-This document describes planned tables. Their data has not yet
-been generated.
+The account registry is implemented and validated: each existing
+user receives one synthetic CASH account and one synthetic
+INVESTMENT account.
+
+Account IDs are derived deterministically from user ID and account
+type, so this generator needs no random seed. All other extension
+tables remain planned.
 
 ## Existing foundation
 
