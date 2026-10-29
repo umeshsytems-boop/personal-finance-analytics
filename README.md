@@ -72,12 +72,6 @@ Recreate the tables by running:
 
 Next: validate the extracted tables.
 
-**Status: Step 6C — exported user and transaction records reconciled with the source JSON.**
-
-Validation results: [Count and ID report](docs/table_validation.json).
-
-Source comparison: [Reconciliation report](docs/source_reconciliation.json).
-
 **Status: Step 7B — 1,000 synthetic accounts generated and validated for 500 users.**
 
 Recreate the account registry:
