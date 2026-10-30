@@ -11,8 +11,19 @@ user receives one synthetic CASH account and one synthetic
 INVESTMENT account.
 
 Account IDs are derived deterministically from user ID and account
-type, so this generator needs no random seed. All other extension
-tables remain planned.
+type, so this generator needs no random seed. 
+
+Cash-balance snapshots are also implemented for 2024-12-28.
+
+The cash generator uses base seed 42, combined with each account ID
+and snapshot date. CASH account balances range from USD 500 to
+25,000; INVESTMENT account cash ranges from USD 0 to 3,000.
+
+These are arbitrary demonstration ranges. Investment-account cash
+excludes holdings. The simulated balances have not been reconciled
+to historical source transactions.
+
+All remaining extension tables are still planned.
 
 ## Existing foundation
 

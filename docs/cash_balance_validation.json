@@ -1,0 +1,32 @@
+{
+  "scope": "Synthetic end-of-day cash snapshots; not reconciled to source transactions",
+  "generator_version": "cash_balances_v1",
+  "as_of_date": "2024-12-28",
+  "base_seed": 42,
+  "seed_rule": "Version, base seed, account_id, and as_of_date combined per account",
+  "ranges_in_cents": {
+    "CASH": [
+      50000,
+      2500000
+    ],
+    "INVESTMENT": [
+      0,
+      300000
+    ]
+  },
+  "currency_note": "USD is a demonstration assumption",
+  "investment_cash_note": "Uninvested cash only; excludes holding values",
+  "accounts_checked": 1000,
+  "snapshots_checked": 1000,
+  "checks": {
+    "snapshot_count_correct": true,
+    "account_date_keys_unique": true,
+    "all_accounts_covered": true,
+    "snapshot_dates_correct": true,
+    "currencies_match_accounts": true,
+    "balances_follow_generation_rules": true,
+    "synthetic_origin_recorded": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}
