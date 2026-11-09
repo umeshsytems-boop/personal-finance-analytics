@@ -72,7 +72,7 @@ Recreate the tables by running:
 
 Next: validate the extracted tables.
 
-**Status: Step 7F — 1,500 simulated holdings generated and validated for 500 investment accounts.**
+**Status: Step 7G — 1,500 holding valuations calculated and reconciled.**
 
 Recreate the account registry:
 `.\.venv\Scripts\python.exe .\src\generate_accounts.py`
@@ -89,6 +89,9 @@ Recreate the simulated asset prices:
 Recreate the simulated holdings:
 `.\.venv\Scripts\python.exe .\src\generate_holdings.py`
 
+Recalculate holding values:
+`.\.venv\Scripts\python.exe .\src\value_holdings.py`
+
 Validation evidence:
 - [Table validation report](docs/table_validation.json)
 - [Source reconciliation report](docs/source_reconciliation.json)
@@ -97,9 +100,10 @@ Validation evidence:
 - [Asset validation report](docs/asset_validation.json)
 - [Asset price validation report](docs/asset_price_validation.json)
 - [Holding validation report](docs/holding_validation.json)
+- [Holding valuation report](docs/valuation_report.json)
 
 Project decisions:
 - [Data quality and handling decisions](docs/data_quality_decisions.md)
 - [Financial model plan](docs/financial_model_plan.md)
 
-Next: calculate holding values using quantities and dated asset prices.
+Next: generate and validate synthetic liability snapshots.

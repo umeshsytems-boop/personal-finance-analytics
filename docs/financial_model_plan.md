@@ -48,6 +48,18 @@ These positions are demonstration assumptions and have not been
 reconstructed from purchases or historical source transactions.
 Cash snapshots remain separate from holdings.
 
+Holding valuations are implemented for 2024-12-28.
+Each holding is matched to a price using asset ID, snapshot date,
+and account currency. Its value is quantity multiplied by unit price.
+
+Calculations use Decimal arithmetic with ROUND_HALF_UP to two
+decimal places per holding. Individual values and the combined
+total are reconciled using integer cents.
+
+The valuation table preserves one row per holding and excludes
+cash and liabilities. Purchase costs and investment returns
+have not yet been calculated.
+
 Liabilities, goals, scheduled payments, and portfolio events
 remain planned.
 

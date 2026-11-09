@@ -1,0 +1,25 @@
+{
+  "scope": "Valuation of simulated holdings; excludes cash and liabilities",
+  "calculation_version": "holding_values_v1",
+  "as_of_date": "2024-12-28",
+  "valuation_rule": "Quantity multiplied by the same-date, same-currency unit price",
+  "rounding_rule": "ROUND_HALF_UP to two decimal places per holding",
+  "control_rule": "Whole units multiplied by integer price cents",
+  "limitations": "Snapshot values do not measure cost basis, profit, or investment return",
+  "holdings_checked": 1500,
+  "valuations_checked": 1500,
+  "currency": "USD",
+  "total_holding_value": "8696282.75",
+  "expected_total_value": "8696282.75",
+  "checks": {
+    "valuation_count_matches_holdings": true,
+    "holding_keys_preserved": true,
+    "valuation_keys_unique": true,
+    "individual_values_reconcile_in_cents": true,
+    "total_value_reconciles_in_cents": true,
+    "usd_currency_applied": true,
+    "synthetic_origin_recorded": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}
