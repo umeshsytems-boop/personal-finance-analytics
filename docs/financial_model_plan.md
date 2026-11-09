@@ -75,6 +75,21 @@ have zero modeled debt in this complete synthetic snapshot.
 Outstanding balances are stored as positive amounts owed.
 They are not inferred from or reconciled to source transactions.
 
+Modeled net-worth snapshots are implemented for 2024-12-28,
+with one record per user, date, and currency.
+
+Net worth equals total cash plus investment holdings value
+minus total liabilities. Total cash includes balances in both
+CASH and INVESTMENT accounts.
+
+Each component is aggregated separately by user before combining.
+All users are retained, including users with zero modeled debt.
+Negative net worth is permitted when liabilities exceed assets.
+
+The calculation uses integer cents and reconciles component totals
+to their input tables. It covers the simulated assets and debts
+included in this project and does not measure investment returns.
+
 Goals, scheduled payments, and portfolio events remain planned.
 
 ## Existing foundation

@@ -1,0 +1,37 @@
+{
+  "scope": "Per-user modeled net worth from simulated financial assets and debts",
+  "calculation_version": "net_worth_v1",
+  "as_of_date": "2024-12-28",
+  "currency": "USD",
+  "formula": "Total cash + investment holdings value - total liabilities",
+  "cash_rule": "Include cash in CASH and INVESTMENT accounts exactly once",
+  "debt_coverage_rule": "Verify the complete synthetic debt snapshot before assigning zero debt",
+  "limitations": "One simulated date; excludes unmodeled assets and debts; not investment performance",
+  "users_checked": 500,
+  "snapshots_checked": 500,
+  "users_with_zero_modeled_debt": 186,
+  "users_with_negative_net_worth": 38,
+  "totals_usd": {
+    "total_cash": "6959554.50",
+    "total_investments": "8696282.75",
+    "total_assets": "15655837.25",
+    "total_liabilities": "4793141.59",
+    "net_worth": "10862695.66"
+  },
+  "checks": {
+    "user_count_correct": true,
+    "user_date_currency_keys_unique": true,
+    "all_users_included": true,
+    "date_and_currency_correct": true,
+    "asset_formula_correct": true,
+    "net_worth_formula_correct": true,
+    "cash_total_reconciles": true,
+    "investment_total_reconciles": true,
+    "liability_total_reconciles": true,
+    "net_worth_total_reconciles": true,
+    "zero_debt_users_preserved": true,
+    "synthetic_origin_recorded": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}
