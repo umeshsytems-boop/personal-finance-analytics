@@ -1,0 +1,59 @@
+{
+  "scope": "One simulated upcoming bill occurrence per user and payment type",
+  "generator_version": "scheduled_payments_v1",
+  "as_of_date": "2024-12-28",
+  "window_start": "2024-12-29",
+  "window_end": "2025-01-27",
+  "horizon_days": 30,
+  "currency_note": "USD is a demonstration assumption",
+  "base_seed": 42,
+  "seed_rule": "Version, seed, user ID, snapshot date, and payment type",
+  "payment_rules": {
+    "RENT": {
+      "payee": "Demo landlord",
+      "amount_min_usd": 800,
+      "amount_max_usd": 2500,
+      "due_in_days": 4
+    },
+    "UTILITIES": {
+      "payee": "Demo utilities",
+      "amount_min_usd": 80,
+      "amount_max_usd": 250,
+      "due_in_days": 12
+    },
+    "INSURANCE": {
+      "payee": "Demo insurer",
+      "amount_min_usd": 50,
+      "amount_max_usd": 200,
+      "due_in_days": 20
+    }
+  },
+  "accounting_note": "Future plans; no cash movement or additional liability recorded",
+  "funding_note": "Amounts are independent of available cash; funding coverage is assessed separately",
+  "limitations": "Three demo bills per user; not inferred from source history or a complete expense forecast",
+  "users_checked": 500,
+  "funding_accounts_checked": 500,
+  "scheduled_payments_checked": 1500,
+  "total_scheduled_usd": "956665.00",
+  "totals_by_type_usd": {
+    "INSURANCE": "63129.00",
+    "RENT": "810540.00",
+    "UTILITIES": "82996.00"
+  },
+  "checks": {
+    "payment_count_correct": true,
+    "payment_ids_unique": true,
+    "each_cash_account_has_three_payment_types": true,
+    "ownership_matches_users": true,
+    "payment_labels_and_ids_valid": true,
+    "snapshot_dates_correct": true,
+    "due_dates_follow_rules": true,
+    "payments_within_30_day_window": true,
+    "currencies_match_accounts": true,
+    "amounts_follow_demo_ranges": true,
+    "all_payments_scheduled": true,
+    "synthetic_origin_recorded": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}

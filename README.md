@@ -72,7 +72,7 @@ Recreate the tables by running:
 
 Next: validate the extracted tables.
 
-**Status: Step 7J — 1,000 savings goals generated and validated against existing cash.**
+**Status: Step 7K — 1,500 scheduled payments generated and validated for 500 users.**
 
 Recreate the account registry:
 `.\.venv\Scripts\python.exe .\src\generate_accounts.py`
@@ -101,6 +101,9 @@ Recalculate modeled net worth:
 Recreate the savings goals:
 `.\.venv\Scripts\python.exe .\src\generate_goals.py`
 
+Recreate the scheduled payments:
+`.\.venv\Scripts\python.exe .\src\generate_scheduled_payments.py`
+
 Validation evidence:
 - [Table validation report](docs/table_validation.json)
 - [Source reconciliation report](docs/source_reconciliation.json)
@@ -113,9 +116,10 @@ Validation evidence:
 - [Liability validation report](docs/liability_validation.json)
 - [Net-worth validation report](docs/net_worth_validation.json)
 - [Savings-goal validation report](docs/goal_validation.json)
+- [Scheduled-payment validation report](docs/scheduled_payment_validation.json)
 
 Project decisions:
 - [Data quality and handling decisions](docs/data_quality_decisions.md)
 - [Financial model plan](docs/financial_model_plan.md)
 
-Next: generate scheduled payments linked to users and funding accounts.
+Next: assess cash coverage after savings-goal allocations and scheduled payments.

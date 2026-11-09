@@ -108,7 +108,26 @@ additional assets, reduce account balances, or change net worth.
 Targets are reproducible using base seed 42, user ID,
 snapshot date, goal type, and generator version.
 
-Scheduled payments and portfolio events remain planned.
+Scheduled payments are implemented for the 30-day period
+after the 2024-12-28 snapshot: 2024-12-29 through 2025-01-27.
+
+Each user has three demonstration payment occurrences:
+rent, utilities, and insurance. Each payment connects to
+the user's existing CASH account.
+
+Amounts are positive USD values generated independently
+of available cash. Funding shortfalls will be assessed separately.
+
+All records have SCHEDULED status. These plans do not post
+transactions, reduce cash balances, or add liabilities.
+
+Generation uses base seed 42 with the user ID, snapshot date,
+payment type, and generator version.
+
+The schedule is synthetic and is not inferred from transaction
+history or intended to represent every future expense.
+
+Portfolio events remain planned.
 
 
 ## Existing foundation
