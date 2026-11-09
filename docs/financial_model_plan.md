@@ -127,6 +127,32 @@ payment type, and generator version.
 The schedule is synthetic and is not inferred from transaction
 history or intended to represent every future expense.
 
+Cash-coverage snapshots are implemented as of 2024-12-28
+for the payment window 2024-12-29 through 2025-01-27.
+
+Eligible funds are the user's CASH-account balance.
+Investment-account cash and holdings are excluded from
+this coverage measure.
+
+Cash after commitments equals eligible cash minus existing
+goal allocations minus the scheduled payments in the window.
+
+Goals and payments are aggregated separately by funding account
+before combining them with cash balances.
+
+Negative results are retained and labeled SHORTFALL.
+Zero or positive results are labeled COVERED.
+
+Funding shortfall equals the absolute value of a negative result,
+or zero otherwise. Shortfalls are calculated per user before
+being summed across users.
+
+The calculation assumes goal allocations remain reserved.
+It excludes future income, goal releases, and unlisted expenses.
+
+This is a planning measure. It does not post transactions
+or change cash balances or net worth.
+
 Portfolio events remain planned.
 
 
