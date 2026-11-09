@@ -90,7 +90,26 @@ The calculation uses integer cents and reconciles component totals
 to their input tables. It covers the simulated assets and debts
 included in this project and does not measure investment returns.
 
-Goals, scheduled payments, and portfolio events remain planned.
+Savings-goal snapshots are implemented for 2024-12-28.
+Each user has an emergency-fund goal and a travel goal,
+both linked to their existing CASH account.
+
+Emergency-fund targets range from USD 3,000 to 15,000.
+Travel targets range from USD 1,000 to 6,000.
+These are arbitrary demonstration ranges.
+
+Allocations use up to 30% of the CASH balance for emergencies
+and 20% for travel. Each allocation is capped at its target
+and rounded down to whole cents.
+
+Goal allocations earmark existing cash. They do not create
+additional assets, reduce account balances, or change net worth.
+
+Targets are reproducible using base seed 42, user ID,
+snapshot date, goal type, and generator version.
+
+Scheduled payments and portfolio events remain planned.
+
 
 ## Existing foundation
 

@@ -1,0 +1,50 @@
+{
+  "scope": "Synthetic savings goals earmarked from existing CASH-account balances",
+  "generator_version": "goals_v1",
+  "as_of_date": "2024-12-28",
+  "currency_note": "USD is a demonstration assumption",
+  "base_seed": 42,
+  "seed_rule": "Version, seed, user ID, snapshot date, and goal type",
+  "goal_rules": {
+    "EMERGENCY_FUND": {
+      "name": "Emergency fund",
+      "target_min_usd": 3000,
+      "target_max_usd": 15000,
+      "cash_percent": 30,
+      "days_until_target": 365
+    },
+    "TRAVEL": {
+      "name": "Travel",
+      "target_min_usd": 1000,
+      "target_max_usd": 6000,
+      "cash_percent": 20,
+      "days_until_target": 180
+    }
+  },
+  "allocation_rule": "Up to 30% for emergency fund and 20% for travel, each capped at its target",
+  "accounting_note": "Allocations remain part of existing cash; no new assets or cash movements",
+  "limitations": "Arbitrary demo rules; remaining cash may still be needed for other obligations",
+  "users_checked": 500,
+  "funding_accounts_checked": 500,
+  "goals_checked": 1000,
+  "eligible_cash_usd": "6210008.22",
+  "allocated_to_goals_usd": "2821550.88",
+  "cash_not_allocated_to_goals_usd": "3388457.34",
+  "checks": {
+    "goal_count_correct": true,
+    "goal_date_keys_unique": true,
+    "each_cash_account_has_both_goals": true,
+    "ownership_matches_users": true,
+    "goal_labels_and_ids_valid": true,
+    "snapshot_dates_correct": true,
+    "target_dates_follow_rules": true,
+    "currencies_match_accounts": true,
+    "targets_follow_demo_ranges": true,
+    "allocations_within_targets": true,
+    "individual_allocation_caps_respected": true,
+    "combined_allocation_caps_respected": true,
+    "synthetic_origin_recorded": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}
