@@ -1,0 +1,52 @@
+{
+  "scope": "Daily simulated unit prices anchored to the existing opening snapshot",
+  "generator_version": "asset_price_history_v1",
+  "base_seed": 42,
+  "seed_rule": "Version, base seed, asset_id, and price_date for each daily draw",
+  "opening_date": "2024-12-28",
+  "last_price_date": "2025-01-27",
+  "simulation_days": 30,
+  "dates_per_asset": 31,
+  "assets_checked": 6,
+  "prices_checked": 186,
+  "currency": "USD",
+  "max_daily_draw_bps_by_asset_class": {
+    "EQUITY": 150,
+    "FIXED_INCOME": 30,
+    "CRYPTO": 400
+  },
+  "generation_rule": "Previous price multiplied by (1 + draw_bps / 10000)",
+  "draw_rule": "Uniform integer draw between the negative and positive class limit",
+  "rounding_rule": "ROUND_HALF_UP to cents each day; minimum price USD 0.01",
+  "limits_note": "Draw limits apply before rounding; they are arbitrary demo assumptions",
+  "calendar_rule": "Every calendar day, including weekends and holidays",
+  "limitations": "Fictional prices, not market quotes or forecasts; excludes dividends and fees",
+  "opening_prices_usd": {
+    "demo_crypto_01": "250.00",
+    "demo_crypto_02": "12.50",
+    "demo_etf_01": "100.00",
+    "demo_etf_02": "95.75",
+    "demo_stock_01": "125.50",
+    "demo_stock_02": "82.25"
+  },
+  "ending_prices_usd": {
+    "demo_crypto_01": "231.64",
+    "demo_crypto_02": "12.62",
+    "demo_etf_01": "98.69",
+    "demo_etf_02": "94.66",
+    "demo_stock_01": "120.59",
+    "demo_stock_02": "85.18"
+  },
+  "checks": {
+    "schema_and_required_fields_valid": true,
+    "row_count_correct": true,
+    "asset_date_currency_keys_unique": true,
+    "complete_asset_date_currency_grid": true,
+    "opening_prices_match_snapshot": true,
+    "prices_positive_with_cent_precision": true,
+    "prices_follow_generation_rules": true,
+    "synthetic_origin_recorded": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}

@@ -130,3 +130,35 @@ matching-date balances for all included assets and liabilities.
 Investment returns require dated portfolio valuations and
 cash-flow adjustments. A change in portfolio value alone
 will not be labeled an investment return.
+
+## Implemented daily price history
+
+Daily simulated prices are stored in
+`data/processed/asset_price_history.csv`.
+
+The table contains 186 rows: six assets across 31 calendar dates,
+from 2024-12-28 through 2025-01-27.
+
+Opening prices match the existing `asset_prices.csv` snapshot.
+Each later price is calculated from the previous day's rounded price.
+
+Generation uses base seed 42 with the generator version,
+asset ID, and price date.
+
+Daily changes are drawn as whole basis points:
+- EQUITY: -150 to +150 basis points.
+- FIXED_INCOME: -30 to +30 basis points.
+- CRYPTO: -400 to +400 basis points.
+
+One basis point equals 0.01 percent.
+These ranges are arbitrary demonstration assumptions and apply
+before rounding.
+
+Prices use ROUND_HALF_UP to cents, with a minimum of USD 0.01.
+The series includes weekends and holidays as simulated calendar days.
+
+These are fictional unit prices. Portfolio performance will require
+holdings, cash movements, dividends, and fees to be processed separately.
+
+Validation evidence:
+[Daily price-history report](price_history_validation.json).
