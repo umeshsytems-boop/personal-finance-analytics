@@ -1,0 +1,34 @@
+{
+  "scope": "Opening investment-account values from existing synthetic snapshots",
+  "calculation_version": "portfolio_opening_v1",
+  "as_of_date": "2024-12-28",
+  "currency": "USD",
+  "formula": "Investment-account cash + same-date holdings value",
+  "cash_rule": "Include only cash in INVESTMENT accounts, once per account",
+  "valuation_control": "Verify every holding using whole units and integer price cents",
+  "limitations": "Opening values are not contributions, cost basis, profit, or returns",
+  "users_checked": 500,
+  "investment_accounts_checked": 500,
+  "holdings_checked": 1500,
+  "snapshots_checked": 500,
+  "totals_usd": {
+    "opening_cash": "749546.28",
+    "opening_holdings_value": "8696282.75",
+    "opening_portfolio_value": "9445829.03"
+  },
+  "checks": {
+    "one_row_per_investment_account": true,
+    "all_users_included": true,
+    "owners_match_accounts": true,
+    "opening_date_and_currency_correct": true,
+    "per_account_cash_matches_input": true,
+    "per_account_holdings_values_reconcile": true,
+    "portfolio_value_formula_correct": true,
+    "opening_cash_total_reconciles": true,
+    "opening_holdings_total_reconciles": true,
+    "opening_portfolio_total_reconciles": true,
+    "synthetic_origin_recorded": true,
+    "csv_matches_calculated_records": true
+  },
+  "all_checks_passed": true
+}

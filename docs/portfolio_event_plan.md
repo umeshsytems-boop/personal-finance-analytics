@@ -37,6 +37,16 @@ contributions, income, or investment gains.
 Opening holding values are market-value assumptions.
 They do not establish purchase costs or tax cost basis.
 
+Opening portfolio balances are implemented in
+`data/processed/portfolio_opening_balances.csv`.
+
+The table contains one row per investment account for 2024-12-28.
+Each row combines that account's uninvested cash and validated
+holdings value. Holdings are aggregated before adding cash once.
+
+Validation evidence:
+[Portfolio opening validation report](portfolio_opening_validation.json).
+
 ## Planned event types
 
 All event amounts are stored as positive magnitudes.

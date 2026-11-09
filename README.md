@@ -72,7 +72,7 @@ Recreate the tables by running:
 
 Next: validate the extracted tables.
 
-**Status: Step 7M — portfolio opening balances and event rules documented.**
+**Status: Step 7N — 500 investment portfolio opening balances calculated and validated.**
 
 Recreate the account registry:
 `.\.venv\Scripts\python.exe .\src\generate_accounts.py`
@@ -107,6 +107,9 @@ Recreate the scheduled payments:
 Recalculate cash coverage:
 `.\.venv\Scripts\python.exe .\src\calculate_cash_coverage.py`
 
+Recalculate portfolio opening balances:
+`.\.venv\Scripts\python.exe .\src\calculate_portfolio_opening.py`
+
 Validation evidence:
 - [Table validation report](docs/table_validation.json)
 - [Source reconciliation report](docs/source_reconciliation.json)
@@ -121,10 +124,11 @@ Validation evidence:
 - [Savings-goal validation report](docs/goal_validation.json)
 - [Scheduled-payment validation report](docs/scheduled_payment_validation.json)
 - [Cash-coverage validation report](docs/cash_coverage_validation.json)
+- [Portfolio opening validation report](docs/portfolio_opening_validation.json)
 
 Project decisions:
 - [Data quality and handling decisions](docs/data_quality_decisions.md)
 - [Financial model plan](docs/financial_model_plan.md)
 - [Portfolio event plan](docs/portfolio_event_plan.md)
 
-Next: calculate and validate the investment portfolio opening balances.
+Next: generate and validate simulated daily asset prices.
