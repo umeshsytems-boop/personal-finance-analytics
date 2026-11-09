@@ -1,0 +1,46 @@
+{
+  "scope": "Simulated BUY and SELL events with cash and unit replay checks",
+  "generator_version": "portfolio_trades_v1",
+  "base_seed": 42,
+  "seed_rule": "Version, base seed, account_id, and trade date",
+  "opening_date": "2024-12-28",
+  "trade_dates": [
+    "2025-01-03",
+    "2025-01-17"
+  ],
+  "trade_rule": "One SELL followed by one BUY per account on each trade date",
+  "quantity_rule": "1 to 5 whole units, capped by units owned or cash available",
+  "execution_rule": "Same-date USD simulated price; immediate cash and unit settlement",
+  "selection_note": "Buy and sell may reference the same asset; this is not a trading strategy",
+  "limitations": "Trade-only scenario; excludes fees, dividends, transfers, taxes, spread, and slippage",
+  "amount_note": "Trade amounts are gross values, not investment profits or household spending",
+  "investment_accounts_checked": 500,
+  "events_checked": 2000,
+  "event_type_counts": {
+    "SELL": 1000,
+    "BUY": 1000
+  },
+  "totals_usd": {
+    "opening_investment_cash": "749546.28",
+    "buy_amount": "298866.46",
+    "sell_amount": "317469.74",
+    "investment_cash_after_trades": "768149.56"
+  },
+  "checks": {
+    "schema_and_required_fields_valid": true,
+    "event_ids_unique": true,
+    "complete_trade_schedule": true,
+    "ownership_currency_and_origin_correct": true,
+    "event_ids_follow_rule": true,
+    "quantities_and_amounts_valid": true,
+    "same_date_currency_prices_exist": true,
+    "execution_prices_and_amounts_match": true,
+    "sufficient_cash_before_every_buy": true,
+    "sufficient_units_before_every_sale": true,
+    "trade_value_conserved_at_execution_price": true,
+    "closing_cash_reconciles_per_account": true,
+    "closing_units_reconcile_per_account_asset": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}

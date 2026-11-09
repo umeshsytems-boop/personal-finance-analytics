@@ -162,3 +162,33 @@ holdings, cash movements, dividends, and fees to be processed separately.
 
 Validation evidence:
 [Daily price-history report](price_history_validation.json).
+
+## Implemented buy and sell events
+
+The portfolio_trade_events table contains 2,000 simulated trades across
+500 investment accounts.
+
+Each account has one SELL followed by one BUY on 2025-01-03 and
+2025-01-17. Event sequence 1 is the sale; sequence 2 is the purchase.
+
+Quantities range from one to five whole units, capped by units owned
+for sales and available investment-account cash for purchases.
+A purchase may select the same asset that was sold.
+
+Trades use the same-date simulated USD price with immediate cash and
+unit settlement. Amounts are positive; event type determines direction.
+Generation uses base seed 42, account ID, trade date, and generator version.
+
+Validation replays the events from the opening snapshots and checks
+ownership, prices, amounts, available cash, available units, and closing
+balances. Buying or selling at the execution price preserves portfolio
+value at that instant before fees.
+
+The opening snapshots remain the starting point for subsequent replay.
+This first trade scenario excludes dividends, fees, transfers, taxes,
+spreads, and slippage.
+
+Trade amounts represent gross purchases and sales, not investment
+profits or household spending.
+
+Validation: [Portfolio trade report](portfolio_trade_validation.json).
