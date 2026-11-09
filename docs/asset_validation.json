@@ -1,0 +1,30 @@
+{
+  "scope": "Fictional asset reference catalog; excludes prices and user holdings",
+  "generator_version": "assets_v1",
+  "generation_rule": "Six explicitly defined demo assets; fixed IDs; no randomness",
+  "currency_note": "USD is the assumed quote currency for future simulated prices",
+  "classification_note": "Asset type describes the instrument; asset class describes its modeled exposure",
+  "symbols_note": "DEMO_ symbols are fictional display labels; join tables using asset_id",
+  "assets_checked": 6,
+  "asset_type_counts": {
+    "STOCK": 2,
+    "ETF": 2,
+    "CRYPTO": 2
+  },
+  "asset_class_counts": {
+    "EQUITY": 3,
+    "FIXED_INCOME": 1,
+    "CRYPTO": 2
+  },
+  "checks": {
+    "schema_and_required_fields_valid": true,
+    "expected_asset_type_counts": true,
+    "asset_ids_unique": true,
+    "symbols_unique_in_demo_catalog": true,
+    "asset_type_class_pairs_valid": true,
+    "usd_quote_assumption_applied": true,
+    "synthetic_assets_labeled": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}

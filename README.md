@@ -72,7 +72,7 @@ Recreate the tables by running:
 
 Next: validate the extracted tables.
 
-**Status: Step 7C — 1,000 synthetic cash-balance snapshots generated and validated for 2024-12-28.**
+**Status: Step 7D — six fictional investment assets generated and validated.**
 
 Recreate the account registry:
 `.\.venv\Scripts\python.exe .\src\generate_accounts.py`
@@ -80,14 +80,18 @@ Recreate the account registry:
 Recreate the cash-balance snapshots:
 `.\.venv\Scripts\python.exe .\src\generate_cash_balances.py`
 
+Recreate the asset catalog:
+`.\.venv\Scripts\python.exe .\src\generate_assets.py`
+
 Validation evidence:
 - [Table validation report](docs/table_validation.json)
 - [Source reconciliation report](docs/source_reconciliation.json)
 - [Account validation report](docs/account_validation.json)
 - [Cash-balance validation report](docs/cash_balance_validation.json)
+- [Asset validation report](docs/asset_validation.json)
 
 Project decisions:
 - [Data quality and handling decisions](docs/data_quality_decisions.md)
 - [Financial model plan](docs/financial_model_plan.md)
 
-Next: create the investment asset catalog.
+Next: generate dated simulated prices for the asset catalog.

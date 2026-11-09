@@ -23,7 +23,15 @@ These are arbitrary demonstration ranges. Investment-account cash
 excludes holdings. The simulated balances have not been reconciled
 to historical source transactions.
 
-All remaining extension tables are still planned.
+The asset catalog is implemented with six fictional instruments:
+two stocks, two ETFs, and two cryptocurrencies.
+
+Stable asset IDs will link future price and holding tables.
+USD is the assumed quote currency. The DEMO_ symbols are fictional
+display labels.
+
+Prices, holdings, liabilities, goals, scheduled payments, and
+portfolio events remain planned.
 
 ## Existing foundation
 
