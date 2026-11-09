@@ -153,7 +153,10 @@ It excludes future income, goal releases, and unlisted expenses.
 This is a planning measure. It does not post transactions
 or change cash balances or net worth.
 
-Portfolio events remain planned.
+Portfolio opening balances and event rules are documented in
+[Portfolio event plan](portfolio_event_plan.md).
+
+Portfolio-event generation remains planned.
 
 
 ## Existing foundation

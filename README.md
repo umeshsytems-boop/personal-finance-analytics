@@ -72,7 +72,7 @@ Recreate the tables by running:
 
 Next: validate the extracted tables.
 
-**Status: Step 7L — 500 cash-coverage snapshots calculated and validated.**
+**Status: Step 7M — portfolio opening balances and event rules documented.**
 
 Recreate the account registry:
 `.\.venv\Scripts\python.exe .\src\generate_accounts.py`
@@ -125,5 +125,6 @@ Validation evidence:
 Project decisions:
 - [Data quality and handling decisions](docs/data_quality_decisions.md)
 - [Financial model plan](docs/financial_model_plan.md)
+- [Portfolio event plan](docs/portfolio_event_plan.md)
 
-Next: define portfolio-event rules and opening balances.
+Next: calculate and validate the investment portfolio opening balances.
