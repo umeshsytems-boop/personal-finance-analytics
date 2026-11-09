@@ -36,8 +36,21 @@ Prices are fixed demonstration values with cent precision.
 They are not historical market quotes, and this single-date table
 cannot establish investment returns.
 
-Holdings, liabilities, goals, scheduled payments, and
-portfolio events remain planned.
+Holding snapshots are implemented for 2024-12-28.
+Each investment account has three distinct fictional assets,
+with 1 to 100 whole units per holding.
+
+The generator uses base seed 42 with each account ID and snapshot
+date. Every holding connects to an existing investment account,
+asset, and price for the same date and currency.
+
+These positions are demonstration assumptions and have not been
+reconstructed from purchases or historical source transactions.
+Cash snapshots remain separate from holdings.
+
+Liabilities, goals, scheduled payments, and portfolio events
+remain planned.
+
 ## Existing foundation
 
 - `users`: one row per user, identified by `user_id`.

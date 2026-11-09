@@ -1,0 +1,27 @@
+{
+  "scope": "Simulated end-of-day holdings linked to accounts, assets, and prices",
+  "generator_version": "holdings_v1",
+  "as_of_date": "2024-12-28",
+  "base_seed": 42,
+  "seed_rule": "Version, base seed, account_id, and snapshot date per account",
+  "selection_rule": "Three distinct assets per investment account",
+  "quantity_rule": "1 to 100 whole units per holding, including demo crypto",
+  "limitations": "Assumed positions; not reconstructed from trades or source transactions",
+  "cash_note": "Cash snapshots remain separate and unchanged",
+  "ownership_note": "User ownership relies on the previously validated account registry",
+  "investment_accounts_checked": 500,
+  "holdings_checked": 1500,
+  "checks": {
+    "holding_count_correct": true,
+    "account_asset_date_keys_unique": true,
+    "investment_accounts_covered_exactly": true,
+    "three_holdings_per_account": true,
+    "assets_exist": true,
+    "snapshot_dates_correct": true,
+    "quantities_follow_generation_rules": true,
+    "same_date_currency_prices_exist": true,
+    "synthetic_origin_recorded": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}
