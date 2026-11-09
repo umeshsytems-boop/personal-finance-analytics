@@ -60,8 +60,22 @@ The valuation table preserves one row per holding and excludes
 cash and liabilities. Purchase costs and investment returns
 have not yet been calculated.
 
-Liabilities, goals, scheduled payments, and portfolio events
-remain planned.
+Liability snapshots are implemented for 2024-12-28.
+Each user receives zero, one, or two simulated debts: a credit card
+balance and/or a personal loan.
+
+Credit card balances range from USD 200 to 8,000.
+Personal loan balances range from USD 1,000 to 30,000.
+These are arbitrary demonstration ranges.
+
+The generator uses base seed 42 with each user ID and snapshot date.
+All input users are processed. Users without generated debt records
+have zero modeled debt in this complete synthetic snapshot.
+
+Outstanding balances are stored as positive amounts owed.
+They are not inferred from or reconciled to source transactions.
+
+Goals, scheduled payments, and portfolio events remain planned.
 
 ## Existing foundation
 

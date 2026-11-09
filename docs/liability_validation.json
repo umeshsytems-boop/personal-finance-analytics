@@ -1,0 +1,39 @@
+{
+  "scope": "Simulated end-of-day debt balances linked to existing users",
+  "generator_version": "liabilities_v1",
+  "as_of_date": "2024-12-28",
+  "base_seed": 42,
+  "seed_rule": "Version, base seed, user_id, and snapshot date per user",
+  "selection_rule": "Zero, one, or two distinct debt types per user",
+  "ranges_in_cents": {
+    "CREDIT_CARD": [
+      20000,
+      800000
+    ],
+    "PERSONAL_LOAN": [
+      100000,
+      3000000
+    ]
+  },
+  "currency_note": "USD is a demonstration assumption",
+  "coverage_note": "All input users processed; no rows means zero modeled debt",
+  "limitations": "Balances are simulated, not inferred from or reconciled to transactions",
+  "users_processed": 500,
+  "users_with_liabilities": 314,
+  "users_with_no_modeled_debt": 186,
+  "liabilities_checked": 477,
+  "total_outstanding_balance": "4793141.59",
+  "checks": {
+    "schema_and_required_fields_valid": true,
+    "liability_date_keys_unique": true,
+    "one_debt_per_user_type": true,
+    "owners_exist": true,
+    "types_and_ids_follow_rules": true,
+    "snapshot_dates_correct": true,
+    "balances_follow_generation_rules": true,
+    "usd_currency_applied": true,
+    "synthetic_origin_recorded": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}

@@ -72,7 +72,7 @@ Recreate the tables by running:
 
 Next: validate the extracted tables.
 
-**Status: Step 7G — 1,500 holding valuations calculated and reconciled.**
+**Status: Step 7H — simulated liability snapshots generated and validated.**
 
 Recreate the account registry:
 `.\.venv\Scripts\python.exe .\src\generate_accounts.py`
@@ -92,6 +92,9 @@ Recreate the simulated holdings:
 Recalculate holding values:
 `.\.venv\Scripts\python.exe .\src\value_holdings.py`
 
+Recreate the simulated liability snapshots:
+`.\.venv\Scripts\python.exe .\src\generate_liabilities.py`
+
 Validation evidence:
 - [Table validation report](docs/table_validation.json)
 - [Source reconciliation report](docs/source_reconciliation.json)
@@ -101,9 +104,10 @@ Validation evidence:
 - [Asset price validation report](docs/asset_price_validation.json)
 - [Holding validation report](docs/holding_validation.json)
 - [Holding valuation report](docs/valuation_report.json)
+- [Liability validation report](docs/liability_validation.json)
 
 Project decisions:
 - [Data quality and handling decisions](docs/data_quality_decisions.md)
 - [Financial model plan](docs/financial_model_plan.md)
 
-Next: generate and validate synthetic liability snapshots.
+Next: calculate modeled net worth for each user from cash, investments, and liabilities.
