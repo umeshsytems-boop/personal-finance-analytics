@@ -1,0 +1,29 @@
+{
+  "scope": "Simulated end-of-day unit prices for fictional assets",
+  "generator_version": "asset_prices_v1",
+  "as_of_date": "2024-12-28",
+  "generation_rule": "Fixed arbitrary USD prices per asset; no randomness",
+  "prices_usd": {
+    "demo_stock_01": "125.50",
+    "demo_stock_02": "82.25",
+    "demo_etf_01": "100.00",
+    "demo_etf_02": "95.75",
+    "demo_crypto_01": "250.00",
+    "demo_crypto_02": "12.50"
+  },
+  "limitations": "Not historical market quotes; one date cannot measure returns",
+  "assets_checked": 6,
+  "prices_checked": 6,
+  "checks": {
+    "schema_and_required_fields_valid": true,
+    "price_count_correct": true,
+    "asset_date_currency_keys_unique": true,
+    "all_assets_covered": true,
+    "price_dates_correct": true,
+    "currencies_match_assets": true,
+    "prices_positive_with_cent_precision": true,
+    "synthetic_origin_recorded": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}

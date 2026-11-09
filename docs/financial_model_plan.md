@@ -30,9 +30,14 @@ Stable asset IDs will link future price and holding tables.
 USD is the assumed quote currency. The DEMO_ symbols are fictional
 display labels.
 
-Prices, holdings, liabilities, goals, scheduled payments, and
-portfolio events remain planned.
+Simulated asset prices are implemented for 2024-12-28.
+Each of the six fictional assets has one end-of-day USD unit price.
+Prices are fixed demonstration values with cent precision.
+They are not historical market quotes, and this single-date table
+cannot establish investment returns.
 
+Holdings, liabilities, goals, scheduled payments, and
+portfolio events remain planned.
 ## Existing foundation
 
 - `users`: one row per user, identified by `user_id`.
