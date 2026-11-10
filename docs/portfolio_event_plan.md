@@ -192,3 +192,35 @@ Trade amounts represent gross purchases and sales, not investment
 profits or household spending.
 
 Validation: [Portfolio trade report](portfolio_trade_validation.json).
+
+## Implemented dividends and fees
+
+The portfolio_cash_events table contains simulated DIVIDEND and FEE
+events linked to existing investment accounts.
+
+Dividends are paid on 2025-01-24 using positive units held after the
+validated buy and sell events. Fixed demonstration payments per unit are:
+
+- demo_stock_01: USD 0.50
+- demo_stock_02: USD 0.35
+- demo_etf_01: USD 0.20
+- demo_etf_02: USD 0.15
+
+Crypto assets receive no distributions in this scenario.
+Dividend eligibility uses holdings at payment time. Ex-dividend dates,
+record dates, taxes, and dividend-related price adjustments are not modeled.
+
+An account fee is charged on 2025-01-27. The charge is the lesser of
+USD 5.00 and available investment cash after dividends. Zero charges
+are omitted, and any uncharged portion is waived rather than recorded
+as debt.
+
+Amounts are positive: DIVIDEND adds cash and FEE subtracts cash.
+These events do not change asset quantities. Fee rows leave the
+asset-specific fields blank.
+
+Generation uses fixed rules with no additional randomness.
+Validation checks ownership, event coverage, dividend quantities and
+rates, fees, sequencing, and cash reconciliation.
+
+Validation: [Portfolio cash-event report](portfolio_cash_event_validation.json).

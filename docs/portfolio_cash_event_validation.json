@@ -1,0 +1,49 @@
+{
+  "scope": "Simulated dividends and account fees after validated trades",
+  "generator_version": "dividends_and_fees_v1",
+  "generation_rule": "Fixed rates and cash-limited fee; no randomness",
+  "dividend_date": "2025-01-24",
+  "fee_date": "2025-01-27",
+  "dividend_per_unit_usd": {
+    "demo_stock_01": "0.50",
+    "demo_stock_02": "0.35",
+    "demo_etf_01": "0.20",
+    "demo_etf_02": "0.15"
+  },
+  "fee_limit_usd": "5.00",
+  "eligibility_rule": "Positive stock/ETF units held after all trades, at payment time",
+  "fee_rule": "Lesser of USD 5.00 and available investment cash; omit zero charges",
+  "waiver_rule": "Any uncharged fee portion is waived, not accrued as debt",
+  "blank_fields_note": "Fee asset_id, eligible_quantity, and amount_per_unit are blank",
+  "limitations": "No ex-dividend/record-date model, taxes, or dividend price adjustment; fictional distributions",
+  "investment_accounts_checked": 500,
+  "events_checked": 1805,
+  "event_type_counts": {
+    "DIVIDEND": 1305,
+    "FEE": 500
+  },
+  "accounts_without_fee": 0,
+  "totals_usd": {
+    "investment_cash_after_trades": "768149.56",
+    "dividends": "15490.10",
+    "fees": "2500.00",
+    "investment_cash_after_events": "781139.66"
+  },
+  "checks": {
+    "schema_and_required_fields_valid": true,
+    "event_ids_unique": true,
+    "account_date_sequence_keys_unique": true,
+    "ownership_currency_and_origin_correct": true,
+    "event_types_dates_and_ids_valid": true,
+    "amounts_positive_with_cent_precision": true,
+    "asset_fields_match_event_type": true,
+    "dividend_and_fee_coverage_complete": true,
+    "event_sequences_correct": true,
+    "dividend_units_rates_and_amounts_match": true,
+    "fees_match_cash_limited_rule": true,
+    "cash_nonnegative_after_each_event": true,
+    "closing_cash_reconciles_per_account": true,
+    "csv_matches_generated_records": true
+  },
+  "all_checks_passed": true
+}

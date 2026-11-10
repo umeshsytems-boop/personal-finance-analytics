@@ -72,7 +72,7 @@ Recreate the tables by running:
 
 Next: validate the extracted tables.
 
-**Status: Step 7P — 2,000 simulated buy and sell events generated and validated.**
+**Status: Step 7Q — 1,305 simulated dividends and 500 account fees generated and validated.**
 
 Recreate the account registry:
 `.\.venv\Scripts\python.exe .\src\generate_accounts.py`
@@ -116,6 +116,9 @@ Recreate the simulated daily price history:
 Recreate the simulated portfolio trades:
 `.\.venv\Scripts\python.exe .\src\generate_portfolio_trades.py`
 
+Recreate the simulated dividends and fees:
+`.\.venv\Scripts\python.exe .\src\generate_dividends_and_fees.py`
+
 Validation evidence:
 - [Table validation report](docs/table_validation.json)
 - [Source reconciliation report](docs/source_reconciliation.json)
@@ -133,10 +136,11 @@ Validation evidence:
 - [Portfolio opening validation report](docs/portfolio_opening_validation.json)
 - [Daily price-history validation report](docs/price_history_validation.json)
 - [Portfolio trade validation report](docs/portfolio_trade_validation.json)
+- [Portfolio cash-event validation report](docs/portfolio_cash_event_validation.json)
 
 Project decisions:
 - [Data quality and handling decisions](docs/data_quality_decisions.md)
 - [Financial model plan](docs/financial_model_plan.md)
 - [Portfolio event plan](docs/portfolio_event_plan.md)
 
-Next: add simulated dividends and fees to the portfolio scenario.
+Next: generate and validate paired transfers between cash and investment accounts.
